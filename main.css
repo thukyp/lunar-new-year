@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center; /* Căn giữa nội dung ngang */
+  background-image: url(https://tindep.com/wp-content/uploads/2019/11/hinh-nen-tet-2020-26.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column; /* Hiển thị các phần tử con theo cột */
+  height: 100vh;
+  padding: 20px; /* Thêm khoảng cách 20px xung quanh nội dung */
+  font-weight: bold;
+}
+
+.greeting {
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 3rem;
+  color: gold;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.greeting:hover {
+  color: #ffcc00;
+}
+
+.wishes {
+  font-size: 1.3rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.wishes:hover {
+  color: #ff0000; /* Thay đổi màu sắc khi hover qua dòng chữ */
+  font-size: 1.4rem; /* Thay đổi kích thước chữ khi hover qua dòng chữ */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.greeting {
+  animation: fadeIn 1s ease-out;
+}
+
+.greeting:hover {
+  color: #ffcc00; /* Màu sắc mới khi hover */
+  transform: scale(1.1); /* Phóng to chữ khi hover */
+  transition: color 0.3s ease, transform 0.3s ease; /* Áp dụng hiệu ứng chuyển động */
+}
+
+.countdown {
+  padding-bottom: 20px;
+  font-family: "Courier New", Courier, monospace; /* Sử dụng kiểu chữ đặc biệt */
+  color: #ff0000; /* Sử dụng màu đỏ */
+}
+
+.countdown:hover {
+  color: #ff9900; /* Thay đổi màu sắc khi hover */
+}
+
+.firework {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ffcc00;
+  position: absolute;
+  animation: explode 2s linear forwards;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(20);
+    opacity: 0;
+  }
+}
